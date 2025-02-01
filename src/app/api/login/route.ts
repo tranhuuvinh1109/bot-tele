@@ -3,6 +3,7 @@ import TelegramBot from "node-telegram-bot-api";
 
 //req is short for request
 export async function GET(req: NextRequest) {
+  console.log(req);
   // replace the value below with the Telegram token you receive from @BotFather
   const token = "7621484908:AAHVvPxEK6y5_klTQGV2Uy93VTgcj9My8ls";
 
@@ -22,6 +23,8 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+  console.log(req);
+
   return NextResponse.json(
     { message: "This is a post request" },
     { status: 200 }
@@ -29,6 +32,8 @@ export async function POST(req: NextRequest) {
 }
 
 export async function PATCH(req: NextRequest) {
+  console.log(req);
+
   return NextResponse.json(
     { message: "This is a patch request" },
     { status: 200 }
